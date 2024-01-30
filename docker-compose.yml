@@ -1,0 +1,41 @@
+version: "3.9"
+
+services: 
+  backend: 
+    container_name: backend
+    build: 
+      context: backend
+      dockerfile: Dockerfile
+    image: backend-image
+    ports: 
+      - 4000:4000
+    env_file: .env
+    networks: 
+      - backend
+  
+  frontend: 
+    container_name: frontend
+    build: 
+      context: frontend
+      dockerfile: Dockerfile
+    image: frontend-image
+    ports: 
+      - 8081:80
+    networks: 
+      - frontend
+
+  database_postgres: 
+    container_name: postgres
+    image: postgres
+    env_file: .env
+    volumes: 
+      - tompostgres:/data/postgres
+    networks: 
+      - backend
+  
+volumes: 
+  tompostgres: 
+
+networks: 
+  backend:
+  frontend:
