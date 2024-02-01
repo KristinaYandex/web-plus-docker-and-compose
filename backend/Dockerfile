@@ -23,6 +23,6 @@ RUN npm ci --no-audit --no-fund --omit=dev && npm i -g pm2
 #копирование папки dist из собранного проекта в папку образа
 COPY --from=builder /app/dist ./dist
 COPY ./ecosystem.config.js ./
-#EXPOSE 4000
+#EXPOSE 4008
 #сборка проекта
 ENTRYPOINT ["pm2-runtime", "start", "ecosystem.config.js"]

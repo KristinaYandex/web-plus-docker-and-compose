@@ -7,6 +7,6 @@ async function bootstrap() {
   // Добавим глобальный пайплайн валидации на следующей строке
   app.useGlobalPipes(new ValidationPipe());
 
-  await app.listen(4000);
+  await app.listen(4008);
 }
 bootstrap();
