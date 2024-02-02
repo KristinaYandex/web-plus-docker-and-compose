@@ -20,6 +20,6 @@ WORKDIR /app
 COPY --from=builder /app/build /usr/share/nginx/html
 #копирование конфигурационного файла nginx
 COPY ./nginx/default.conf /etc/nginx/conf.d
-#EXPOSE 8081
+EXPOSE 80
 #сборка проекта
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
