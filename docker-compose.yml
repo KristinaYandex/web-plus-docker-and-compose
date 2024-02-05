@@ -10,6 +10,7 @@ services:
     ports: 
       - 4004:4008
     env_file: .env
+    restart: unless-stopped
     networks: 
       - backend
   
@@ -21,6 +22,7 @@ services:
     image: frontend-image
     ports: 
       - 8081:80
+    restart: unless-stopped
     networks: 
       - frontend
 
@@ -30,6 +32,7 @@ services:
     env_file: .env
     volumes: 
       - tompostgres:/data/postgres
+    restart: unless-stopped
     networks: 
       - backend
   

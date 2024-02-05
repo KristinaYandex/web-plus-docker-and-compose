@@ -13,7 +13,7 @@ RUN npm run build
 
 
 #базовый образ для размещения на сервере
-FROM nginx:1.23.1-alpine as frontend
+FROM nginx:latest as frontend
 #рабочая директория внутри образа, где будет находиться приложение
 WORKDIR /app
 #копирование папки build из собранного проекта в папку nginx собранного образа 
