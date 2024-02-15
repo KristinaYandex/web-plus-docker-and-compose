@@ -16,6 +16,17 @@
    - загрузка проекта
    - выпуск сертификата SSL для шифрования данных
    - развертывание и запуск проекта при помощи команды docker-compose up -d и docker-compose up --build
+   - 
+# Технологии
+- Docker
+- Docker Compose
+- Nginx
+- TypeORM
+- NestJS
+- Node.js
+- PostgreSQL
+- Passport.js
+- TypeScript
 
 # Публикация приложения
 - IP адрес 158.160.144.180
